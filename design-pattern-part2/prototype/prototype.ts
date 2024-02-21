@@ -53,13 +53,21 @@ function run() {
     manager.registerItem("mouse", mouse);
     manager.registerItem("keyboard", keyboard);
 
-    const cloneMouse = manager.create("mouse");
-    const cloneKeyboard = manager.create("keyboard");
+    const clonedMouse = manager.create("mouse");
+    const clonedKeyboard = manager.create("keyboard");
 
     console.log("マウス（オリジナル）：", mouse);
-    console.log("マウス（コピー）：", cloneMouse);
+    console.log("マウス（コピー）：", clonedMouse);
     console.log("キーボード（オリジナル）：", keyboard);
-    console.log("キーボード（コピー）：", cloneKeyboard);
+    console.log("キーボード（コピー）：", clonedKeyboard);
+
+    clonedMouse.addComment("Good");
+    clonedKeyboard.addComment("SoSo");
+    console.log("");
+    console.log("マウス（オリジナル）：", mouse);
+    console.log("マウス（コピー）：", clonedMouse);
+    console.log("キーボード（オリジナル）：", keyboard);
+    console.log("キーボード（コピー）：", clonedKeyboard);
 }
 
 run();
